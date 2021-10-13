@@ -40,6 +40,16 @@
     </v-app-bar>
 
     <v-main class="grey lighten-3">
+      <v-banner single-line v-if="loadingUser">
+        <v-icon slot="icon" color="warning" size="36">
+          mdi-wifi-strength-alert-outline
+        </v-icon>
+        Unable to verify your Internet connection
+
+        <template v-slot:actions>
+          <v-btn color="primary" text> Connection Settings </v-btn>
+        </template>
+      </v-banner>
       <div v-if="loadingUser" class="pa-4 text-center">
         <h3 class="text-h6 font-weight-light mb-2">Bienvenido a PICHIPU</h3>
         <p class="text-caption">Verificando información de usuario</p>

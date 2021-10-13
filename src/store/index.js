@@ -7,6 +7,8 @@ import committeeResult from './modules/committee-result';
 import deliveryRoute from './modules/delivery-route';
 import patientDecision from './modules/patient-decision';
 import organization from './modules/organization';
+import statusCase from './modules/status-case';
+import system from './modules/system';
 
 Vue.use(Vuex);
 
@@ -22,5 +24,7 @@ export default new Vuex.Store({
     deliveryRoute,
     patientDecision,
     organization,
+    statusCase,
+    system,
   },
 });

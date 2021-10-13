@@ -25,10 +25,20 @@
 
       <v-col>
         <v-sheet min-height="70vh" class="fill-height pa-3" rounded="lg">
-          <router-view />
+          <router-view @updateSnackbar="updateSnackbar" />
         </v-sheet>
       </v-col>
     </v-row>
+    <v-snackbar
+      :timeout="3000"
+      v-model="model"
+      top
+      :color="color"
+      outlined
+      right
+    >
+      {{ message }}
+    </v-snackbar>
   </v-container>
 </template>
 
@@ -75,7 +85,18 @@ export default {
         link: 'System',
       },
     ],
+    message: '',
+    color: '',
+    model: '',
   }),
+
+  methods: {
+    updateSnackbar({ message, color }) {
+      this.message = message;
+      this.color = color;
+      this.model = true;
+    },
+  },
 };
 </script>
 
