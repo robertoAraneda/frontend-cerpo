@@ -1,13 +1,11 @@
 <template>
-$END$
+  <h1>Estado casos</h1>
 </template>
 
 <script>
 export default {
-name: "Status-case"
-}
+  name: 'StatusCase',
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

@@ -1,13 +1,11 @@
 <template>
-$END$
+  <h1>Sistemas</h1>
 </template>
 
 <script>
 export default {
-name: "System"
-}
+  name: 'System',
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

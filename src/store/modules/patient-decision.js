@@ -1,19 +1,19 @@
 import httpRequest from '../../services/http';
 
-const BASE_URL = '/api/v1/delivery-routes';
+const BASE_URL = '/api/v1/patient-decisions';
 
 export default {
   namespaced: true,
   state: {
-    deliveryRoutes: [],
+    patientDecisions: [],
   },
   mutations: {
-    SET_DELIVERY_ROUTES: (state, payload) => {
-      state.deliveryRoutes = payload;
+    SET_PATIENT_DECISIONS: (state, payload) => {
+      state.patientDecisions = payload;
     },
   },
   getters: {
-    deliveryRoutes: (state) => state.deliveryRoutes,
+    patientDecisions: (state) => state.patientDecisions,
   },
   actions: {
     showItem: async (_, url) => {
@@ -28,9 +28,9 @@ export default {
       try {
         const { data } = await httpRequest.getRequest(`${BASE_URL}`);
         console.log(data);
-        commit('SET_DELIVERY_ROUTES', data);
+        commit('SET_PATIENT_DECISIONS', data);
       } catch (error) {
-        commit('SET_DELIVERY_ROUTES', []);
+        commit('SET_PATIENT_DECISIONS', []);
         console.log(error);
       }
     },

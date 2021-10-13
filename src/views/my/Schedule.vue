@@ -1,13 +1,11 @@
 <template>
-$END$
+  <h1>Agenda</h1>
 </template>
 
 <script>
 export default {
-name: "Schedule"
-}
+  name: 'Schedule',
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
